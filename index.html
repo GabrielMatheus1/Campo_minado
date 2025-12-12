@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Testes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- tela 1 -->
+  <div class="fundo_infos">
+     <div class="info_jogadores">
+       
+       <div class="jogador">
+         <label>Nome do Jogador</label>
+         <input type="text" name="jogador" id="jogador" class="txt_jogador_1">
+      </div>
+       
+      <div class="jogador">
+        <label>Codigo da sala</label>
+        <input type="text" id="txt_cod_existente" placeholder="em breve batalha naval" class="txt_cod_existente" disabled>
+      </div>
+    
+      <div class="jogador">
+        <button onclick="usuario()"> Entrar </button>
+        <button disabled> Criar Sala </button>
+      </div>
+       
+    </div>
+  </div>
+  
+  <!-- tela 2 -->
+  <div class="campo_jogo">
+    <div class="painel_info">
+      <h6>ola mundo</h6>
+    </div>
+    
+    <div class="disabilitado"></div>
+     
+    <div class="alerta">
+      <h4>Nivel Facil</h4>
+      <h5> Campo 6x6 cotém 1 BOMBA </h5>
+      <h5> Tente não acertar a BOMBA! </h5>
+    </div>
+  </div>
+  
+  
+ 
+  
+  <!-- tela 3 -->
+  <div class="placar">
+    <h4>Pontuação Final</h4>
+    
+    <div class="dados_jogo">
+      <p>Jogador</p>
+        <span id="nome_jogador"></span>
+      <p>Pontuação</p>
+        <span id="pontuacao_jogador"></span>
+    </div>
+       
+    <div class="btns_placar">
+      <button onclick="novamente()"> Jogar Novamente </button>
+      <button onclick="sairJogo()"> Sair </button>
+    </div>
+
+  </div>
+  
+  <script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.metaKey && e.shiftKey && e.key === 'I')) {
+      e.preventDefault();
+    }
+  });
+  </script>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
