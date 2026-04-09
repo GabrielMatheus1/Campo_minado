@@ -17,17 +17,19 @@ body {
 /* tela 1 */
 .fundo_infos {
   display: none;
-  position: fixed;
+  position: relative;
   top:0;
   left:0;
   width: 100vw;
   height: 100vh;
   background: black;
+  overflow: auto;
   
   
   .info_jogadores {
     background: white;
-    max-width: 80%;
+    max-width: 90%;
+    height: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,19 +38,24 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+    overflow: auto;
     
     .jogador {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       
       label {
         font-weight: bold;
+        margin: 0;
       }
       
       input {
-        margin: 10px 0 0 0;
+        margin: 0 0 10px 0;
         padding: 10px;
         border-radius: 20px;
+        width: 90%;
       }
       
       button {
@@ -86,7 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 0px;
-     color:transparent;
+     color: transparent;
   }
   
   .disabilitado {
@@ -124,7 +131,7 @@ body {
 /* tela 3 */
 .placar {
   width: 80%;
-  height: 300px;
+  min-height: 300px;
   padding: 20px;
   background: white;
   display: none;
@@ -173,4 +180,39 @@ body {
       font-weight: bold;
     }
   }
+}
+
+
+/* tabela de pontuação*/
+.box_tabela{
+  max-height: 200px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+#tabela_pontuacao, #tabela_pontuacao_inicio {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  
+  th:nth-child(1) {
+    width: 20%;
+  }
+  
+  th:nth-child(2) {
+    width: 50%;
+  }
+  
+  th:nth-child(3) {
+    width: 50%;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
 }
