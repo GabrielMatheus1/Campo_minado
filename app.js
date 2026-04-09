@@ -128,7 +128,7 @@ function carregaCampo(x,y, qtd) {
                 `
                 campos.innerHTML += template
                 linha.push(dimensaoCampo)
-                console.log(linha)
+                //console.log(linha)
             }
         }
     
